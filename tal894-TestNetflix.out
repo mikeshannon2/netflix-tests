@@ -1,0 +1,65 @@
+==7151== Memcheck, a memory error detector
+==7151== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==7151== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==7151== Command: ./TestNetflix
+==7151== 
+Running main() from gtest_main.cc
+[==========] Running 18 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 18 tests from NetflixFixture
+[ RUN      ] NetflixFixture.truncate_1
+[       OK ] NetflixFixture.truncate_1 (16 ms)
+[ RUN      ] NetflixFixture.truncate_2
+[       OK ] NetflixFixture.truncate_2 (6 ms)
+[ RUN      ] NetflixFixture.truncate_3
+[       OK ] NetflixFixture.truncate_3 (2 ms)
+[ RUN      ] NetflixFixture.predict_1
+[       OK ] NetflixFixture.predict_1 (57 ms)
+[ RUN      ] NetflixFixture.predict_2
+[       OK ] NetflixFixture.predict_2 (4 ms)
+[ RUN      ] NetflixFixture.predict_3
+[       OK ] NetflixFixture.predict_3 (5 ms)
+[ RUN      ] NetflixFixture.average_data_1
+[       OK ] NetflixFixture.average_data_1 (10 ms)
+[ RUN      ] NetflixFixture.average_data_2
+[       OK ] NetflixFixture.average_data_2 (11 ms)
+[ RUN      ] NetflixFixture.average_data_3
+[       OK ] NetflixFixture.average_data_3 (4 ms)
+[ RUN      ] NetflixFixture.RMSE_1
+[       OK ] NetflixFixture.RMSE_1 (16 ms)
+[ RUN      ] NetflixFixture.RMSE_2
+[       OK ] NetflixFixture.RMSE_2 (4 ms)
+[ RUN      ] NetflixFixture.RMSE_3
+[       OK ] NetflixFixture.RMSE_3 (4 ms)
+[ RUN      ] NetflixFixture.solve_1
+[       OK ] NetflixFixture.solve_1 (96 ms)
+[ RUN      ] NetflixFixture.solve_2
+[       OK ] NetflixFixture.solve_2 (7 ms)
+[ RUN      ] NetflixFixture.solve_3
+[       OK ] NetflixFixture.solve_3 (9 ms)
+[ RUN      ] NetflixFixture.rmse_print_1
+[       OK ] NetflixFixture.rmse_print_1 (3 ms)
+[ RUN      ] NetflixFixture.rmse_print_2
+[       OK ] NetflixFixture.rmse_print_2 (5 ms)
+[ RUN      ] NetflixFixture.rmse_print_3
+[       OK ] NetflixFixture.rmse_print_3 (3 ms)
+[----------] 18 tests from NetflixFixture (286 ms total)
+
+[----------] Global test environment tear-down
+[==========] 18 tests from 1 test case ran. (338 ms total)
+[  PASSED  ] 18 tests.
+==7151== 
+==7151== HEAP SUMMARY:
+==7151==     in use at exit: 0 bytes in 0 blocks
+==7151==   total heap usage: 935 allocs, 935 frees, 98,645 bytes allocated
+==7151== 
+==7151== All heap blocks were freed -- no leaks are possible
+==7151== 
+==7151== For counts of detected and suppressed errors, rerun with: -v
+==7151== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:100.00% of 37
+Branches executed:100.00% of 60
+Taken at least once:55.00% of 60
+Calls executed:93.33% of 60
+Creating 'Netflix.c++.gcov'
