@@ -1,0 +1,23 @@
+Running main() from gtest_main.cc
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from NetflixFixture
+[ RUN      ] NetflixFixture.netflix_load_cache1
+[       OK ] NetflixFixture.netflix_load_cache1 (1 ms)
+[ RUN      ] NetflixFixture.netflix_load_cache2
+[       OK ] NetflixFixture.netflix_load_cache2 (0 ms)
+[ RUN      ] NetflixFixture.netflix_eval_one1
+[       OK ] NetflixFixture.netflix_eval_one1 (0 ms)
+[ RUN      ] NetflixFixture.netflix_eval_one2
+[       OK ] NetflixFixture.netflix_eval_one2 (0 ms)
+[ RUN      ] NetflixFixture.netflix_eval_one3
+[       OK ] NetflixFixture.netflix_eval_one3 (0 ms)
+[ RUN      ] NetflixFixture.netflix_eval_one4
+[       OK ] NetflixFixture.netflix_eval_one4 (0 ms)
+[ RUN      ] NetflixFixture.netflix_solve
+[       OK ] NetflixFixture.netflix_solve (1 ms)
+[----------] 7 tests from NetflixFixture (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test case ran. (2 ms total)
+[  PASSED  ] 7 tests.
