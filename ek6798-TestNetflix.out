@@ -1,0 +1,59 @@
+==1085== Memcheck, a memory error detector
+==1085== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==1085== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==1085== Command: ./TestNetflix
+==1085== 
+Running main() from gtest_main.cc
+[==========] Running 15 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 15 tests from NetflixFixture
+[ RUN      ] NetflixFixture.read_1
+[       OK ] NetflixFixture.read_1 (9 ms)
+[ RUN      ] NetflixFixture.read_2
+[       OK ] NetflixFixture.read_2 (3 ms)
+[ RUN      ] NetflixFixture.read_3
+[       OK ] NetflixFixture.read_3 (4 ms)
+[ RUN      ] NetflixFixture.eval_1
+[       OK ] NetflixFixture.eval_1 (38 ms)
+[ RUN      ] NetflixFixture.eval_2
+[       OK ] NetflixFixture.eval_2 (3 ms)
+[ RUN      ] NetflixFixture.eval_3
+[       OK ] NetflixFixture.eval_3 (4 ms)
+[ RUN      ] NetflixFixture.rmse_calc_1
+[       OK ] NetflixFixture.rmse_calc_1 (11 ms)
+[ RUN      ] NetflixFixture.rmse_calc_2
+[       OK ] NetflixFixture.rmse_calc_2 (4 ms)
+[ RUN      ] NetflixFixture.rmse_calc_3
+[       OK ] NetflixFixture.rmse_calc_3 (3 ms)
+[ RUN      ] NetflixFixture.print_1
+[       OK ] NetflixFixture.print_1 (7 ms)
+[ RUN      ] NetflixFixture.print_2
+[       OK ] NetflixFixture.print_2 (3 ms)
+[ RUN      ] NetflixFixture.print_3
+[       OK ] NetflixFixture.print_3 (3 ms)
+[ RUN      ] NetflixFixture.solve_1
+[       OK ] NetflixFixture.solve_1 (12 ms)
+[ RUN      ] NetflixFixture.solve_2
+[       OK ] NetflixFixture.solve_2 (6 ms)
+[ RUN      ] NetflixFixture.solve_3
+[       OK ] NetflixFixture.solve_3 (3 ms)
+[----------] 15 tests from NetflixFixture (122 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test case ran. (147 ms total)
+[  PASSED  ] 15 tests.
+==1085== 
+==1085== HEAP SUMMARY:
+==1085==     in use at exit: 0 bytes in 0 blocks
+==1085==   total heap usage: 4,418,515 allocs, 4,418,515 frees, 175,312,097 bytes allocated
+==1085== 
+==1085== All heap blocks were freed -- no leaks are possible
+==1085== 
+==1085== For counts of detected and suppressed errors, rerun with: -v
+==1085== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:100.00% of 90
+Branches executed:100.00% of 158
+Taken at least once:54.43% of 158
+Calls executed:83.66% of 153
+Creating 'Netflix.c++.gcov'
