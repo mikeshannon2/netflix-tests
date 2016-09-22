@@ -13,7 +13,8 @@
 #include <list>
 #include <map>
 #include <sstream> // istringtstream, ostringstream
-#include <string>  // string
+#include <stdio.h>
+#include <string> // string
 
 #include "Netflix.h"
 
@@ -47,13 +48,12 @@ TEST(NetflixFixture, check_exist_3) {
 // ----------
 
 list<double> answers;
-string path_to_actual_rating =
-    "/u/downing/cs/netflix-cs371p/cyt276-as63439-actual-ratings.txt";
 
 TEST(NetflixFixture, get_answer_1) {
-  string path =
-      check_exist(path_to_actual_rating, "cyt276-as63439-actual-ratings.txt");
-  list<double> result = get_answer(path);
+  ofstream ofs("temporary_cache_to_answer.txt");
+  ofs << "1:\n4\n4\n3\n";
+  ofs.close();
+  list<double> result = get_answer("temporary_cache_to_answer.txt");
   answers.push_back(4);
   answers.push_back(4);
   answers.push_back(3);
@@ -63,12 +63,14 @@ TEST(NetflixFixture, get_answer_1) {
     ASSERT_EQ(*it1, *it2);
     ++it1;
   }
+  remove("temporary_cache_to_answer.txt");
 }
 
 TEST(NetflixFixture, get_answer_2) {
-  string path =
-      check_exist(path_to_actual_rating, "cyt276-as63439-actual-ratings.txt");
-  list<double> result = get_answer(path);
+  ofstream ofs("temporary_cache_to_answer.txt");
+  ofs << "1:\n4\n4\n3\n5\n5\n4\n4\n4\n";
+  ofs.close();
+  list<double> result = get_answer("temporary_cache_to_answer.txt");
   answers.push_back(5);
   answers.push_back(5);
   answers.push_back(4);
@@ -80,68 +82,73 @@ TEST(NetflixFixture, get_answer_2) {
     ASSERT_EQ(*it1, *it2);
     ++it1;
   }
+  remove("temporary_cache_to_answer.txt");
 }
 
 TEST(NetflixFixture, get_answer_3) {
-  string path =
-      check_exist(path_to_actual_rating, "cyt276-as63439-actual-ratings.txt");
-  list<double> result = get_answer(path);
-  list<double> reverse;
-  reverse.push_back(2);
-  reverse.push_back(5);
-  reverse.push_back(4);
-  reverse.push_back(3);
-  reverse.push_back(3);
-  list<double>::reverse_iterator it1 = result.rbegin();
-  for (list<double>::iterator it2 = reverse.begin(); it2 != reverse.end();
+  ofstream ofs("temporary_cache_to_answer.txt");
+  ofs << "1:\n4\n4\n3\n5\n5\n4\n4\n4\n2\n5\n4\n3\n3\n";
+  ofs.close();
+  list<double> result = get_answer("temporary_cache_to_answer.txt");
+  answers.push_back(2);
+  answers.push_back(5);
+  answers.push_back(4);
+  answers.push_back(3);
+  answers.push_back(3);
+  list<double>::iterator it1 = result.begin();
+  for (list<double>::iterator it2 = answers.begin(); it2 != answers.end();
        ++it2) {
     ASSERT_EQ(*it1, *it2);
     ++it1;
   }
+  remove("temporary_cache_to_answer.txt");
 }
 
 // ---------
 // get_cache
 // ---------
-string path_to_avg_movie_rate =
-    "/u/downing/cs/netflix-cs371p/sw32327-trc2346-movie-ratings.txt";
-string path_to_avg_customer_rate =
-    "/u/downing/cs/netflix-cs371p/sw32327-trc2346-customer-ratings.txt";
-
 TEST(NetflixFixture, get_cache_1) {
-  string path =
-      check_exist(path_to_avg_movie_rate, "sw32327-trc2346-movie-ratings.txt");
-  map<int, double> avg_movie = get_cache(path);
+  ofstream ofs("temporary_movie_rate.txt");
+  ofs << "00001 3.75\n01000 3.28\n";
+  ofs.close();
+  map<int, double> avg_movie = get_cache("temporary_movie_rate.txt");
   ostringstream avg;
   avg << avg_movie[1];
   ASSERT_EQ(avg.str(), "3.75");
+  remove("temporary_movie_rate.txt");
 }
 
 TEST(NetflixFixture, get_cache_2) {
-  string path =
-      check_exist(path_to_avg_movie_rate, "sw32327-trc2346-movie-ratings.txt");
-  map<int, double> avg_movie = get_cache(path);
+  ofstream ofs("temporary_movie_rate.txt");
+  ofs << "00001 3.75\n01000 3.28\n";
+  ofs.close();
+  map<int, double> avg_movie = get_cache("temporary_movie_rate.txt");
   ostringstream avg;
   avg << avg_movie[1000];
   ASSERT_EQ(avg.str(), "3.28");
+  remove("temporary_movie_rate.txt");
 }
 
 TEST(NetflixFixture, get_cache_3) {
-  string path = check_exist(path_to_avg_customer_rate,
-                            "sw32327-trc2346-customer-ratings.txt");
-  map<int, double> avg_customer = get_cache(path);
+  ofstream ofs("temporary_customer_rate.txt");
+  ofs << "0000006 3.42\n0000719 4.18\n";
+  ofs.close();
+  map<int, double> avg_customer = get_cache("temporary_customer_rate.txt");
   ostringstream avg;
   avg << avg_customer[6];
   ASSERT_EQ(avg.str(), "3.42");
+  remove("temporary_customer_rate.txt");
 }
 
 TEST(NetflixFixture, get_cache_4) {
-  string path = check_exist(path_to_avg_customer_rate,
-                            "sw32327-trc2346-customer-ratings.txt");
-  map<int, double> avg_customer = get_cache(path);
+  ofstream ofs("temporary_customer_rate.txt");
+  ofs << "0000006 3.42\n0000719 4.18\n";
+  ofs.close();
+  map<int, double> avg_customer = get_cache("temporary_customer_rate.txt");
   ostringstream avg;
   avg << avg_customer[719];
   ASSERT_EQ(avg.str(), "4.18");
+  remove("temporary_customer_rate.txt");
 }
 
 // ------------
@@ -261,6 +268,7 @@ TEST(NetflixFixture, calc_rmse_3) {
   ASSERT_EQ(os.str(), "1.14");
 }
 
+// -----
 // reset
 // -----
 
@@ -290,33 +298,35 @@ TEST(NetflixFixture, reset_3) {
 // get_prediction
 // --------------
 
-list<double> answer;
-map<int, double> avg_movie;
-map<int, double> avg_customer;
+map<int, double> avg_movie_rate1;
+map<int, double> avg_movie_rate2;
+map<int, double> avg_movie_rate3;
+map<int, double> avg_customer_rate1;
+map<int, double> avg_customer_rate2;
+map<int, double> avg_customer_rate3;
 
 TEST(NetflixFixture, get_prediction_1) {
-  string path =
-      check_exist(path_to_actual_rating, "az6257-actual-user-ratings.txt");
-  answer = get_answer(path);
-  path =
-      check_exist(path_to_avg_movie_rate, "sw32327-trc2346-movie-ratings.txt");
-  avg_movie = get_cache(path);
-  path = check_exist(path_to_avg_customer_rate,
-                     "sw32327-trc2346-customer-ratings.txt");
-  avg_customer = get_cache(path);
-
   reset();
-  string input = "1:\n30878\n2647871\n1283744\n2488120\n317050\n";
-  double pred[] = {3.6, 3.2, 3.5, 4.7, 3.7};
-  istringstream r(input);
-  netflix_read(r);
-
-  list<double> result = get_prediction(avg_movie, avg_customer);
-  list<double> prediction(pred, pred + 5);
-
+  string input = "1:\n30878\n2647871\n1283744\n2488120\n";
+  istringstream is(input);
+  netflix_read(is);
+  list<double> prediction;
+  list<int>::iterator movie_it = movie_ids.begin();
+  for (list<list<int>>::iterator customer_it = customer_ids.begin();
+       customer_it != customer_ids.end(); ++customer_it) {
+    avg_movie_rate1[*movie_it] = 3.5;
+    list<int> customers = *customer_it;
+    for (list<int>::iterator customer = customers.begin();
+         customer != customers.end(); ++customer) {
+      avg_customer_rate1[*customer] = 4.0;
+      prediction.push_back(3.8);
+    }
+    ++movie_it;
+  }
+  list<double> result = get_prediction(avg_movie_rate1, avg_customer_rate1);
   list<double>::iterator it1 = result.begin();
   list<double>::iterator it2 = prediction.begin();
-  for (int i = 0; i < 5; ++i) {
+  for (unsigned int i = 0; i < avg_customer_rate1.size(); ++i) {
     ostringstream os1;
     ostringstream os2;
     os1 << *it1;
@@ -329,17 +339,27 @@ TEST(NetflixFixture, get_prediction_1) {
 
 TEST(NetflixFixture, get_prediction_2) {
   reset();
-  string input = "1000:\n2326571\n977808\n1010534\n1861759\n79755\n98259\n";
-  double pred[] = {3.1, 2.8, 2.5, 4.5, 3.7, 3.3};
-  istringstream r(input);
-  netflix_read(r);
-
-  list<double> result = get_prediction(avg_movie, avg_customer);
-  list<double> prediction(pred, pred + 6);
-
+  string input =
+      "1:\n30878\n2647871\n1283744\n2488120\n317050\n1904905\n1989766\n14756\n";
+  istringstream is(input);
+  netflix_read(is);
+  list<double> prediction;
+  list<int>::iterator movie_it = movie_ids.begin();
+  for (list<list<int>>::iterator customer_it = customer_ids.begin();
+       customer_it != customer_ids.end(); ++customer_it) {
+    avg_movie_rate2[*movie_it] = 3.5;
+    list<int> customers = *customer_it;
+    for (list<int>::iterator customer = customers.begin();
+         customer != customers.end(); ++customer) {
+      avg_customer_rate2[*customer] = 4.0;
+      prediction.push_back(3.8);
+    }
+    ++movie_it;
+  }
+  list<double> result = get_prediction(avg_movie_rate2, avg_customer_rate2);
   list<double>::iterator it1 = result.begin();
   list<double>::iterator it2 = prediction.begin();
-  for (int i = 0; i < 6; ++i) {
+  for (unsigned int i = 0; i < avg_customer_rate2.size(); ++i) {
     ostringstream os1;
     ostringstream os2;
     os1 << *it1;
@@ -352,17 +372,28 @@ TEST(NetflixFixture, get_prediction_2) {
 
 TEST(NetflixFixture, get_prediction_3) {
   reset();
-  string input = "10005:\n254775\n1892654\n469365\n793736\n926698\n";
-  double pred[] = {3.5, 3.9, 3.1, 2.8, 2.9};
-  istringstream r(input);
-  netflix_read(r);
-
-  list<double> result = get_prediction(avg_movie, avg_customer);
-  list<double> prediction(pred, pred + 5);
-
+  string input = "1:"
+                 "\n30878\n2647871\n1283744\n2488120\n317050\n1904905\n1989766"
+                 "\n14756\n1000:\n2326571\n977808\n1010534\n1861759\n";
+  istringstream is(input);
+  netflix_read(is);
+  list<double> prediction;
+  list<int>::iterator movie_it = movie_ids.begin();
+  for (list<list<int>>::iterator customer_it = customer_ids.begin();
+       customer_it != customer_ids.end(); ++customer_it) {
+    avg_movie_rate3[*movie_it] = 3.5;
+    list<int> customers = *customer_it;
+    for (list<int>::iterator customer = customers.begin();
+         customer != customers.end(); ++customer) {
+      avg_customer_rate3[*customer] = 4.0;
+      prediction.push_back(3.8);
+    }
+    ++movie_it;
+  }
+  list<double> result = get_prediction(avg_movie_rate3, avg_customer_rate3);
   list<double>::iterator it1 = result.begin();
   list<double>::iterator it2 = prediction.begin();
-  for (int i = 0; i < 5; ++i) {
+  for (unsigned int i = 0; i < avg_customer_rate3.size(); ++i) {
     ostringstream os1;
     ostringstream os2;
     os1 << *it1;
@@ -379,30 +410,46 @@ TEST(NetflixFixture, get_prediction_3) {
 
 TEST(NetflixFixture, netflix_calc_1) {
   reset();
-  string input = "1:\n30878\n2647871\n1283744\n2488120\n317050\n";
-  string output = "1:\n3.6\n3.2\n3.5\n4.7\n3.7\nRMSE: 0.75\n";
+  string input = "1:\n30878\n2647871\n1283744\n2488120\n";
+  string output = "1:\n3.8\n3.8\n3.8\n3.8\nRMSE: 0.20\n";
+  ofstream ofs("answer.txt");
+  ofs << "1:\n4\n4\n4\n4\n";
+  ofs.close();
+  list<double> answers = get_answer("answer.txt");
   istringstream is(input);
   ostringstream os;
-  netflix_calc(is, os);
+  netflix_calc(is, os, answers, avg_movie_rate1, avg_customer_rate1);
   ASSERT_EQ(os.str(), output);
 }
 
 TEST(NetflixFixture, netflix_calc_2) {
   reset();
-  string input = "1000:\n2326571\n977808\n1010534\n1861759\n79755\n98259\n";
-  string output = "1000:\n3.1\n2.8\n2.5\n4.5\n3.7\n3.3\nRMSE: 0.90\n";
+  string input =
+      "1:\n30878\n2647871\n1283744\n2488120\n317050\n1904905\n1989766\n14756\n";
+  string output = "1:\n3.8\n3.8\n3.8\n3.8\n3.8\n3.8\n3.8\n3.8\nRMSE: 0.20\n";
+  ofstream ofs("answer.txt");
+  ofs << "1:\n4\n4\n4\n4\n4\n4\n4\n4\n";
+  ofs.close();
+  list<double> answers = get_answer("answer.txt");
   istringstream is(input);
   ostringstream os;
-  netflix_calc(is, os);
+  netflix_calc(is, os, answers, avg_movie_rate2, avg_customer_rate2);
   ASSERT_EQ(os.str(), output);
 }
 
 TEST(NetflixFixture, netflix_calc_3) {
   reset();
-  string input = "10005:\n254775\n1892654\n469365\n793736\n926698\n";
-  string output = "10005:\n3.5\n3.9\n3.1\n2.8\n2.9\nRMSE: 1.37\n";
+  string input = "1:"
+                 "\n30878\n2647871\n1283744\n2488120\n317050\n1904905\n1989766"
+                 "\n14756\n1000:\n2326571\n977808\n1010534\n1861759\n";
+  string output = "1:\n3.8\n3.8\n3.8\n3.8\n3.8\n3.8\n3.8\n3.8\n1000:\n3.8\n3."
+                  "8\n3.8\n3.8\nRMSE: 0.20\n";
+  ofstream ofs("answer.txt");
+  ofs << "1:\n4\n4\n4\n4\n4\n4\n4\n4\n1000:\n4\n4\n4\n4\n";
+  ofs.close();
+  list<double> answers = get_answer("answer.txt");
   istringstream is(input);
   ostringstream os;
-  netflix_calc(is, os);
+  netflix_calc(is, os, answers, avg_movie_rate3, avg_customer_rate3);
   ASSERT_EQ(os.str(), output);
 }
