@@ -1,0 +1,37 @@
+Running main() from gtest_main.cc
+[==========] Running 14 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 14 tests from NetflixFixture
+[ RUN      ] NetflixFixture.trunc_1
+[       OK ] NetflixFixture.trunc_1 (0 ms)
+[ RUN      ] NetflixFixture.trunc_2
+[       OK ] NetflixFixture.trunc_2 (0 ms)
+[ RUN      ] NetflixFixture.trunc_3
+[       OK ] NetflixFixture.trunc_3 (0 ms)
+[ RUN      ] NetflixFixture.trunc_4
+[       OK ] NetflixFixture.trunc_4 (0 ms)
+[ RUN      ] NetflixFixture.trunc_5
+[       OK ] NetflixFixture.trunc_5 (0 ms)
+[ RUN      ] NetflixFixture.trunc_6
+[       OK ] NetflixFixture.trunc_6 (0 ms)
+[ RUN      ] NetflixFixture.predict_1
+[       OK ] NetflixFixture.predict_1 (0 ms)
+[ RUN      ] NetflixFixture.predict_2
+[       OK ] NetflixFixture.predict_2 (0 ms)
+[ RUN      ] NetflixFixture.predict_3
+[       OK ] NetflixFixture.predict_3 (0 ms)
+[ RUN      ] NetflixFixture.predict_4
+[       OK ] NetflixFixture.predict_4 (0 ms)
+[ RUN      ] NetflixFixture.run_1
+[       OK ] NetflixFixture.run_1 (0 ms)
+[ RUN      ] NetflixFixture.run_2
+[       OK ] NetflixFixture.run_2 (1 ms)
+[ RUN      ] NetflixFixture.run_3
+[       OK ] NetflixFixture.run_3 (0 ms)
+[ RUN      ] NetflixFixture.populate_cache
+[       OK ] NetflixFixture.populate_cache (1 ms)
+[----------] 14 tests from NetflixFixture (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 14 tests from 1 test case ran. (2 ms total)
+[  PASSED  ] 14 tests.
