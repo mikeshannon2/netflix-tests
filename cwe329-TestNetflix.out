@@ -1,14 +1,14 @@
-==9416== Memcheck, a memory error detector
-==9416== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
-==9416== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
-==9416== Command: ./TestNetflix
-==9416== 
+==10898== Memcheck, a memory error detector
+==10898== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==10898== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==10898== Command: ./TestNetflix
+==10898== 
 Running main() from gtest_main.cc
 [==========] Running 21 tests from 1 test case.
 [----------] Global test environment set-up.
 [----------] 21 tests from NetflixFixture
 [ RUN      ] NetflixFixture.clear_data_structures_1
-[       OK ] NetflixFixture.clear_data_structures_1 (61 ms)
+[       OK ] NetflixFixture.clear_data_structures_1 (62 ms)
 [ RUN      ] NetflixFixture.clear_data_structures_2
 [       OK ] NetflixFixture.clear_data_structures_2 (6 ms)
 [ RUN      ] NetflixFixture.clear_data_structures_3
@@ -22,44 +22,50 @@ Running main() from gtest_main.cc
 [ RUN      ] NetflixFixture.load_customer_ratings_1
 [       OK ] NetflixFixture.load_customer_ratings_1 (2 ms)
 [ RUN      ] NetflixFixture.load_customer_ratings_2
-[       OK ] NetflixFixture.load_customer_ratings_2 (3 ms)
+[       OK ] NetflixFixture.load_customer_ratings_2 (2 ms)
 [ RUN      ] NetflixFixture.load_customer_ratings_3
 [       OK ] NetflixFixture.load_customer_ratings_3 (3 ms)
 [ RUN      ] NetflixFixture.load_actual_ratings_1
 [       OK ] NetflixFixture.load_actual_ratings_1 (5 ms)
 [ RUN      ] NetflixFixture.load_actual_ratings_2
-[       OK ] NetflixFixture.load_actual_ratings_2 (3 ms)
+[       OK ] NetflixFixture.load_actual_ratings_2 (4 ms)
 [ RUN      ] NetflixFixture.load_actual_ratings_3
-[       OK ] NetflixFixture.load_actual_ratings_3 (4 ms)
+[       OK ] NetflixFixture.load_actual_ratings_3 (3 ms)
 [ RUN      ] NetflixFixture.read_line_1
 [       OK ] NetflixFixture.read_line_1 (3 ms)
 [ RUN      ] NetflixFixture.read_line_2
-[       OK ] NetflixFixture.read_line_2 (2 ms)
+[       OK ] NetflixFixture.read_line_2 (3 ms)
 [ RUN      ] NetflixFixture.read_line_3
 [       OK ] NetflixFixture.read_line_3 (3 ms)
 [ RUN      ] NetflixFixture.print_line_1
-[       OK ] NetflixFixture.print_line_1 (3 ms)
+[       OK ] NetflixFixture.print_line_1 (2 ms)
 [ RUN      ] NetflixFixture.print_line_2
-[       OK ] NetflixFixture.print_line_2 (2 ms)
+[       OK ] NetflixFixture.print_line_2 (3 ms)
 [ RUN      ] NetflixFixture.print_line_3
-[       OK ] NetflixFixture.print_line_3 (4 ms)
+[       OK ] NetflixFixture.print_line_3 (3 ms)
 [ RUN      ] NetflixFixture.calculate_RMSE_1
-[       OK ] NetflixFixture.calculate_RMSE_1 (53439 ms)
+[       OK ] NetflixFixture.calculate_RMSE_1 (55336 ms)
 [ RUN      ] NetflixFixture.calculate_RMSE_2
-[       OK ] NetflixFixture.calculate_RMSE_2 (50053 ms)
+[       OK ] NetflixFixture.calculate_RMSE_2 (49039 ms)
 [ RUN      ] NetflixFixture.calculate_RMSE_3
-[       OK ] NetflixFixture.calculate_RMSE_3 (49546 ms)
-[----------] 21 tests from NetflixFixture (154649 ms total)
+[       OK ] NetflixFixture.calculate_RMSE_3 (49620 ms)
+[----------] 21 tests from NetflixFixture (155525 ms total)
 
 [----------] Global test environment tear-down
-[==========] 21 tests from 1 test case ran. (154676 ms total)
+[==========] 21 tests from 1 test case ran. (155554 ms total)
 [  PASSED  ] 21 tests.
-==9416== 
-==9416== HEAP SUMMARY:
-==9416==     in use at exit: 0 bytes in 0 blocks
-==9416==   total heap usage: 10,046,653 allocs, 10,046,653 frees, 323,735,526 bytes allocated
-==9416== 
-==9416== All heap blocks were freed -- no leaks are possible
-==9416== 
-==9416== For counts of detected and suppressed errors, rerun with: -v
-==9416== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10898== 
+==10898== HEAP SUMMARY:
+==10898==     in use at exit: 0 bytes in 0 blocks
+==10898==   total heap usage: 10,046,653 allocs, 10,046,653 frees, 323,735,526 bytes allocated
+==10898== 
+==10898== All heap blocks were freed -- no leaks are possible
+==10898== 
+==10898== For counts of detected and suppressed errors, rerun with: -v
+==10898== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:95.96% of 99
+Branches executed:95.31% of 128
+Taken at least once:54.69% of 128
+Calls executed:85.71% of 133
+Creating 'Netflix.c++.gcov'
