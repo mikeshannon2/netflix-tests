@@ -1,3 +1,14 @@
+// ----------------------------
+// projects/collatz/Collatz.c++
+// Copyright (C) 2016
+// Christiano Contreras
+// Alex Niznik
+// ----------------------------
+ 
+// --------
+// includes
+// --------
+
 #include "gtest/gtest.h"
 #include "Netflix.h"
 #include <sstream>
