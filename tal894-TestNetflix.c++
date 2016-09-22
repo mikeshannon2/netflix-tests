@@ -31,6 +31,11 @@ TEST(NetflixFixture, truncate_3) {
   ASSERT_EQ(r, 200.0);
 }
 
+TEST(NetflixFixture, truncate_4) {
+  double r = truncate_n_dig(0.9999, 0);
+  ASSERT_EQ(r, 0.0);
+}
+
 TEST(NetflixFixture, predict_1) {
   map<int, Movie> movies = {{1, Movie(1, 2000)}};
   map<int, Customer> customers = {{1, Customer(1)}};
@@ -84,6 +89,16 @@ TEST(NetflixFixture, average_data_3) {
   ASSERT_EQ(r, 3.0);
 }
 
+TEST(NetflixFixture, average_data_4) {
+  map<int, Movie> movies = {
+      {1, Movie(1, 2000)}, {2, Movie(2, 2000)}, {3, Movie(3, 2000)}};
+  movies[1].average = 4.0;
+  movies[2].average = 3.0;
+  movies[3].average = 2.0;
+  double r = average_data(movies);
+  ASSERT_EQ(r, 3.0);
+}
+
 TEST(NetflixFixture, RMSE_1) {
   list<double> predictions = {1.0, 2.0, 3.0};
   list<double> actual = {1.0, 2.0, 3.0};
@@ -103,6 +118,13 @@ TEST(NetflixFixture, RMSE_3) {
   list<double> actual = {1.5, 1.5, 3.5};
   double r = RMSE(predictions.begin(), predictions.end(), actual.begin());
   ASSERT_EQ(r, 0.5);
+}
+
+TEST(NetflixFixture, RMSE_4) {
+  list<double> predictions = {2.0, 2.0, 2.0};
+  list<double> actual = {4.0, 4.0, 4.0};
+  double r = RMSE(predictions.begin(), predictions.end(), actual.begin());
+  ASSERT_EQ(r, 2.0);
 }
 
 TEST(NetflixFixture, solve_1) {
