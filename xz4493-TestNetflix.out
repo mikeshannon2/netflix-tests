@@ -1,0 +1,96 @@
+Running main() from gtest_main.cc
+[==========] Running 39 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 12 tests from DataCacheTest
+[ RUN      ] DataCacheTest.GetCustomerOne
+[       OK ] DataCacheTest.GetCustomerOne (0 ms)
+[ RUN      ] DataCacheTest.GetCustomerTwo
+[       OK ] DataCacheTest.GetCustomerTwo (0 ms)
+[ RUN      ] DataCacheTest.GetCustomerThree
+[       OK ] DataCacheTest.GetCustomerThree (0 ms)
+[ RUN      ] DataCacheTest.GetCustomerFour
+[       OK ] DataCacheTest.GetCustomerFour (0 ms)
+[ RUN      ] DataCacheTest.GetCustomerFive
+[       OK ] DataCacheTest.GetCustomerFive (0 ms)
+[ RUN      ] DataCacheTest.GetCustomerSix
+[       OK ] DataCacheTest.GetCustomerSix (0 ms)
+[ RUN      ] DataCacheTest.GetMovieOne
+[       OK ] DataCacheTest.GetMovieOne (0 ms)
+[ RUN      ] DataCacheTest.GetMovieTwo
+[       OK ] DataCacheTest.GetMovieTwo (0 ms)
+[ RUN      ] DataCacheTest.GetMovieThree
+[       OK ] DataCacheTest.GetMovieThree (0 ms)
+[ RUN      ] DataCacheTest.GetMovieFour
+[       OK ] DataCacheTest.GetMovieFour (0 ms)
+[ RUN      ] DataCacheTest.GetMovieFive
+[       OK ] DataCacheTest.GetMovieFive (0 ms)
+[ RUN      ] DataCacheTest.GetMovieSix
+[       OK ] DataCacheTest.GetMovieSix (0 ms)
+[----------] 12 tests from DataCacheTest (0 ms total)
+
+[----------] 6 tests from TruthCacheTest
+[ RUN      ] TruthCacheTest.GetMovie1Rating1
+[       OK ] TruthCacheTest.GetMovie1Rating1 (0 ms)
+[ RUN      ] TruthCacheTest.GetMovie1Rating2
+[       OK ] TruthCacheTest.GetMovie1Rating2 (0 ms)
+[ RUN      ] TruthCacheTest.GetMovie1Rating3
+[       OK ] TruthCacheTest.GetMovie1Rating3 (0 ms)
+[ RUN      ] TruthCacheTest.GetMovie2Rating4
+[       OK ] TruthCacheTest.GetMovie2Rating4 (0 ms)
+[ RUN      ] TruthCacheTest.GetMovie2Rating5
+[       OK ] TruthCacheTest.GetMovie2Rating5 (0 ms)
+[ RUN      ] TruthCacheTest.GetMovie2Rating6
+[       OK ] TruthCacheTest.GetMovie2Rating6 (0 ms)
+[----------] 6 tests from TruthCacheTest (0 ms total)
+
+[----------] 10 tests from DataMock
+[ RUN      ] DataMock.PredictCustomerOne
+[       OK ] DataMock.PredictCustomerOne (0 ms)
+[ RUN      ] DataMock.PredictCustomerTwo
+[       OK ] DataMock.PredictCustomerTwo (0 ms)
+[ RUN      ] DataMock.PredictCustomerThree
+[       OK ] DataMock.PredictCustomerThree (0 ms)
+[ RUN      ] DataMock.PredictCustomerFour
+[       OK ] DataMock.PredictCustomerFour (0 ms)
+[ RUN      ] DataMock.PredictCustomerFive
+[       OK ] DataMock.PredictCustomerFive (0 ms)
+[ RUN      ] DataMock.PredictCustomerSix
+[       OK ] DataMock.PredictCustomerSix (0 ms)
+[ RUN      ] DataMock.PredictCustomerOneAlt
+[       OK ] DataMock.PredictCustomerOneAlt (0 ms)
+[ RUN      ] DataMock.PredictCustomerTwoAlt
+[       OK ] DataMock.PredictCustomerTwoAlt (0 ms)
+[ RUN      ] DataMock.PredictCustomerThreeAlt
+[       OK ] DataMock.PredictCustomerThreeAlt (0 ms)
+[ RUN      ] DataMock.PredictCustomerFourAlt
+[       OK ] DataMock.PredictCustomerFourAlt (0 ms)
+[----------] 10 tests from DataMock (1 ms total)
+
+[----------] 11 tests from TruthMock
+[ RUN      ] TruthMock.RMSE11
+[       OK ] TruthMock.RMSE11 (0 ms)
+[ RUN      ] TruthMock.RMSE12
+[       OK ] TruthMock.RMSE12 (0 ms)
+[ RUN      ] TruthMock.RMSE112
+[       OK ] TruthMock.RMSE112 (0 ms)
+[ RUN      ] TruthMock.RMSE1123
+[       OK ] TruthMock.RMSE1123 (0 ms)
+[ RUN      ] TruthMock.RMSE123
+[       OK ] TruthMock.RMSE123 (0 ms)
+[ RUN      ] TruthMock.RMSE24
+[       OK ] TruthMock.RMSE24 (0 ms)
+[ RUN      ] TruthMock.RMSE25
+[       OK ] TruthMock.RMSE25 (0 ms)
+[ RUN      ] TruthMock.RMSE245
+[       OK ] TruthMock.RMSE245 (0 ms)
+[ RUN      ] TruthMock.RMSE2456
+[       OK ] TruthMock.RMSE2456 (0 ms)
+[ RUN      ] TruthMock.RMSE256
+[       OK ] TruthMock.RMSE256 (0 ms)
+[ RUN      ] TruthMock.RMSE123456
+[       OK ] TruthMock.RMSE123456 (0 ms)
+[----------] 11 tests from TruthMock (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 39 tests from 4 test cases ran. (1 ms total)
+[  PASSED  ] 39 tests.
