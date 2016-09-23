@@ -1,0 +1,27 @@
+Running main() from gtest_main.cc
+[==========] Running 9 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 9 tests from NetflixFixture
+[ RUN      ] NetflixFixture.read_none
+[       OK ] NetflixFixture.read_none (0 ms)
+[ RUN      ] NetflixFixture.read_one
+[       OK ] NetflixFixture.read_one (0 ms)
+[ RUN      ] NetflixFixture.read_two
+[       OK ] NetflixFixture.read_two (0 ms)
+[ RUN      ] NetflixFixture.print_mov_one
+[       OK ] NetflixFixture.print_mov_one (0 ms)
+[ RUN      ] NetflixFixture.print_mov_two
+[       OK ] NetflixFixture.print_mov_two (0 ms)
+[ RUN      ] NetflixFixture.print_mov_three
+[       OK ] NetflixFixture.print_mov_three (0 ms)
+[ RUN      ] NetflixFixture.print_rate_one
+[       OK ] NetflixFixture.print_rate_one (0 ms)
+[ RUN      ] NetflixFixture.print_rate_two
+[       OK ] NetflixFixture.print_rate_two (0 ms)
+[ RUN      ] NetflixFixture.print_rate_three
+[       OK ] NetflixFixture.print_rate_three (0 ms)
+[----------] 9 tests from NetflixFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 9 tests.
