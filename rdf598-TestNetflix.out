@@ -1,0 +1,39 @@
+==20537== Memcheck, a memory error detector
+==20537== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==20537== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==20537== Command: ./TestNetflix
+==20537== 
+Running main() from gtest_main.cc
+[==========] Running 5 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 5 tests from NetflixFixture
+[ RUN      ] NetflixFixture.read1
+[       OK ] NetflixFixture.read1 (17 ms)
+[ RUN      ] NetflixFixture.read2
+[       OK ] NetflixFixture.read2 (5 ms)
+[ RUN      ] NetflixFixture.eval_1
+[       OK ] NetflixFixture.eval_1 (2 ms)
+[ RUN      ] NetflixFixture.print
+[       OK ] NetflixFixture.print (7 ms)
+[ RUN      ] NetflixFixture.solve
+[       OK ] NetflixFixture.solve (136188 ms)
+[----------] 5 tests from NetflixFixture (136226 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test case ran. (136254 ms total)
+[  PASSED  ] 5 tests.
+==20537== 
+==20537== HEAP SUMMARY:
+==20537==     in use at exit: 0 bytes in 0 blocks
+==20537==   total heap usage: 5,719,377 allocs, 5,719,377 frees, 201,575,701 bytes allocated
+==20537== 
+==20537== All heap blocks were freed -- no leaks are possible
+==20537== 
+==20537== For counts of detected and suppressed errors, rerun with: -v
+==20537== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:100.00% of 89
+Branches executed:91.04% of 134
+Taken at least once:51.49% of 134
+Calls executed:87.40% of 127
+Creating 'Netflix.c++.gcov'
