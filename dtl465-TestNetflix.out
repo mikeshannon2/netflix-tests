@@ -1,0 +1,39 @@
+Running main() from gtest_main.cc
+[==========] Running 12 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 12 tests from NetflixFixture
+[ RUN      ] NetflixFixture.split_1
+[       OK ] NetflixFixture.split_1 (0 ms)
+[ RUN      ] NetflixFixture.split_2
+[       OK ] NetflixFixture.split_2 (0 ms)
+[ RUN      ] NetflixFixture.split_3
+[       OK ] NetflixFixture.split_3 (0 ms)
+[ RUN      ] NetflixFixture.solve_1
+[       OK ] NetflixFixture.solve_1 (5551 ms)
+[ RUN      ] NetflixFixture.solve_2
+[       OK ] NetflixFixture.solve_2 (4993 ms)
+[ RUN      ] NetflixFixture.solve_3
+[       OK ] NetflixFixture.solve_3 (4953 ms)
+[ RUN      ] NetflixFixture.solve_4
+[       OK ] NetflixFixture.solve_4 (4952 ms)
+[ RUN      ] NetflixFixture.solve_5
+[       OK ] NetflixFixture.solve_5 (4971 ms)
+[ RUN      ] NetflixFixture.solve_6
+[       OK ] NetflixFixture.solve_6 (4961 ms)
+[ RUN      ] NetflixFixture.cache_1
+[       OK ] NetflixFixture.cache_1 (1249 ms)
+[ RUN      ] NetflixFixture.cache_2
+[       OK ] NetflixFixture.cache_2 (1244 ms)
+[ RUN      ] NetflixFixture.cache_3
+[       OK ] NetflixFixture.cache_3 (49 ms)
+[----------] 12 tests from NetflixFixture (32923 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test case ran. (32923 ms total)
+[  PASSED  ] 12 tests.
+File 'Netflix.c++'
+Lines executed:100.00% of 70
+Branches executed:100.00% of 144
+Taken at least once:54.86% of 144
+Calls executed:85.04% of 127
+Creating 'Netflix.c++.gcov'
