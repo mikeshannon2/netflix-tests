@@ -1,0 +1,21 @@
+Running main() from gtest_main.cc
+[==========] Running 6 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 6 tests from NetflixFixture
+[ RUN      ] NetflixFixture.solve1
+[       OK ] NetflixFixture.solve1 (0 ms)
+[ RUN      ] NetflixFixture.solve2
+[       OK ] NetflixFixture.solve2 (0 ms)
+[ RUN      ] NetflixFixture.solve3
+[       OK ] NetflixFixture.solve3 (0 ms)
+[ RUN      ] NetflixFixture.solve4
+[       OK ] NetflixFixture.solve4 (0 ms)
+[ RUN      ] NetflixFixture.solve5
+[       OK ] NetflixFixture.solve5 (0 ms)
+[ RUN      ] NetflixFixture.solve6
+[       OK ] NetflixFixture.solve6 (0 ms)
+[----------] 6 tests from NetflixFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 6 tests.

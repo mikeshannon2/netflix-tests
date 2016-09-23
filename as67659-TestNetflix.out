@@ -1,0 +1,68 @@
+==4095== Memcheck, a memory error detector
+==4095== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==4095== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==4095== Command: ./TestNetflix
+==4095== 
+Running main() from gtest_main.cc
+[==========] Running 20 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 20 tests from NetflixTests
+[ RUN      ] NetflixTests.read_1
+[       OK ] NetflixTests.read_1 (13 ms)
+[ RUN      ] NetflixTests.read_2
+[       OK ] NetflixTests.read_2 (2 ms)
+[ RUN      ] NetflixTests.read_3
+[       OK ] NetflixTests.read_3 (3 ms)
+[ RUN      ] NetflixTests.printID1
+[       OK ] NetflixTests.printID1 (5 ms)
+[ RUN      ] NetflixTests.printID2
+[       OK ] NetflixTests.printID2 (3 ms)
+[ RUN      ] NetflixTests.printID3
+[       OK ] NetflixTests.printID3 (2 ms)
+[ RUN      ] NetflixTests.printcstmRg1
+[       OK ] NetflixTests.printcstmRg1 (19 ms)
+[ RUN      ] NetflixTests.printcstmRg2
+[       OK ] NetflixTests.printcstmRg2 (3 ms)
+[ RUN      ] NetflixTests.printcstmRg3
+[       OK ] NetflixTests.printcstmRg3 (2 ms)
+[ RUN      ] NetflixTests.printRMSE1
+[       OK ] NetflixTests.printRMSE1 (7 ms)
+[ RUN      ] NetflixTests.printRMSE2
+[       OK ] NetflixTests.printRMSE2 (2 ms)
+[ RUN      ] NetflixTests.printRMSE3
+[       OK ] NetflixTests.printRMSE3 (2 ms)
+[ RUN      ] NetflixTests.eval_1
+[       OK ] NetflixTests.eval_1 (27 ms)
+[ RUN      ] NetflixTests.eval_2
+[       OK ] NetflixTests.eval_2 (3 ms)
+[ RUN      ] NetflixTests.eval_3
+[       OK ] NetflixTests.eval_3 (4 ms)
+[ RUN      ] NetflixTests.eval_4
+[       OK ] NetflixTests.eval_4 (3 ms)
+[ RUN      ] NetflixTests.eval_5
+[       OK ] NetflixTests.eval_5 (3 ms)
+[ RUN      ] NetflixTests.solve
+[       OK ] NetflixTests.solve (47 ms)
+[ RUN      ] NetflixTests.solve2
+[       OK ] NetflixTests.solve2 (23 ms)
+[ RUN      ] NetflixTests.solve3
+[       OK ] NetflixTests.solve3 (9 ms)
+[----------] 20 tests from NetflixTests (188 ms total)
+
+[----------] Global test environment tear-down
+[==========] 20 tests from 1 test case ran. (217 ms total)
+[  PASSED  ] 20 tests.
+==4095== 
+==4095== HEAP SUMMARY:
+==4095==     in use at exit: 0 bytes in 0 blocks
+==4095==   total heap usage: 607 allocs, 607 frees, 87,255 bytes allocated
+==4095== 
+==4095== All heap blocks were freed -- no leaks are possible
+==4095== 
+==4095== For counts of detected and suppressed errors, rerun with: -v
+==4095== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:100.00% of 34
+Branches executed:100.00% of 30
+Taken at least once:60.00% of 30
+Calls executed:94.12% of 34

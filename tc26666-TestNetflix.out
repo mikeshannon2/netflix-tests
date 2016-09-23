@@ -1,0 +1,60 @@
+Running main() from gtest_main.cc
+[==========] Running 24 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 23 tests from NetflixFixture
+[ RUN      ] NetflixFixture.read_1
+[       OK ] NetflixFixture.read_1 (0 ms)
+[ RUN      ] NetflixFixture.read_2
+[       OK ] NetflixFixture.read_2 (0 ms)
+[ RUN      ] NetflixFixture.read_3
+[       OK ] NetflixFixture.read_3 (0 ms)
+[ RUN      ] NetflixFixture.read_answer_triple_1
+[       OK ] NetflixFixture.read_answer_triple_1 (0 ms)
+[ RUN      ] NetflixFixture.read_answer_triple_2
+[       OK ] NetflixFixture.read_answer_triple_2 (0 ms)
+[ RUN      ] NetflixFixture.read_answer_triple_3
+[       OK ] NetflixFixture.read_answer_triple_3 (0 ms)
+[ RUN      ] NetflixFixture.read_answer_triple_4
+[       OK ] NetflixFixture.read_answer_triple_4 (0 ms)
+[ RUN      ] NetflixFixture.map_1
+[       OK ] NetflixFixture.map_1 (0 ms)
+[ RUN      ] NetflixFixture.map_2
+[       OK ] NetflixFixture.map_2 (0 ms)
+[ RUN      ] NetflixFixture.map_3
+[       OK ] NetflixFixture.map_3 (0 ms)
+[ RUN      ] NetflixFixture.read_avg_rating_1
+[       OK ] NetflixFixture.read_avg_rating_1 (0 ms)
+[ RUN      ] NetflixFixture.read_avg_rating_2
+[       OK ] NetflixFixture.read_avg_rating_2 (0 ms)
+[ RUN      ] NetflixFixture.read_avg_rating_3
+[       OK ] NetflixFixture.read_avg_rating_3 (0 ms)
+[ RUN      ] NetflixFixture.read_avg_rating_4
+[       OK ] NetflixFixture.read_avg_rating_4 (0 ms)
+[ RUN      ] NetflixFixture.map_avg_ratings_1
+[       OK ] NetflixFixture.map_avg_ratings_1 (0 ms)
+[ RUN      ] NetflixFixture.map_avg_ratings_2
+[       OK ] NetflixFixture.map_avg_ratings_2 (0 ms)
+[ RUN      ] NetflixFixture.map_avg_ratings_3
+[       OK ] NetflixFixture.map_avg_ratings_3 (0 ms)
+[ RUN      ] NetflixFixture.predict_1
+[       OK ] NetflixFixture.predict_1 (0 ms)
+[ RUN      ] NetflixFixture.predict_2
+[       OK ] NetflixFixture.predict_2 (0 ms)
+[ RUN      ] NetflixFixture.predict_3
+[       OK ] NetflixFixture.predict_3 (0 ms)
+[ RUN      ] NetflixFixture.solve_2
+[       OK ] NetflixFixture.solve_2 (0 ms)
+[ RUN      ] NetflixFixture.solve_3
+[       OK ] NetflixFixture.solve_3 (0 ms)
+[ RUN      ] NetflixFixture.solve_4
+[       OK ] NetflixFixture.solve_4 (0 ms)
+[----------] 23 tests from NetflixFixture (0 ms total)
+
+[----------] 1 test from NetflixFeature
+[ RUN      ] NetflixFeature.solve_1
+[       OK ] NetflixFeature.solve_1 (1 ms)
+[----------] 1 test from NetflixFeature (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 24 tests from 2 test cases ran. (1 ms total)
+[  PASSED  ] 24 tests.

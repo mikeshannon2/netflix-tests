@@ -1,0 +1,152 @@
+==20809== Memcheck, a memory error detector
+==20809== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==20809== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==20809== Command: ./TestNetflix
+==20809==
+Running main() from gtest_main.cc
+[==========] Running 27 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 27 tests from NetflixFixture
+[ RUN ] NetflixFixture.read_1
+[ OK ] NetflixFixture.read_1 (15 ms)
+[ RUN ] NetflixFixture.read_2
+[ OK ] NetflixFixture.read_2 (2 ms)
+[ RUN ] NetflixFixture.read_3
+[ OK ] NetflixFixture.read_3 (2 ms)
+[ RUN ] NetflixFixture.print_1
+[ OK ] NetflixFixture.print_1 (6 ms)
+[ RUN ] NetflixFixture.print_2
+[ OK ] NetflixFixture.print_2 (15 ms)
+[ RUN ] NetflixFixture.print_3
+[ OK ] NetflixFixture.print_3 (5 ms)
+[ RUN ] NetflixFixture.print_4
+[ OK ] NetflixFixture.print_4 (2 ms)
+[ RUN ] NetflixFixture.calculateRMSE_1
+[ OK ] NetflixFixture.calculateRMSE_1 (2 ms)
+[ RUN ] NetflixFixture.calculateRMSE_2
+[ OK ] NetflixFixture.calculateRMSE_2 (2 ms)
+[ RUN ] NetflixFixture.calculateRMSE_3
+[ OK ] NetflixFixture.calculateRMSE_3 (2 ms)
+[ RUN ] NetflixFixture.calculateRMSE_4
+[ OK ] NetflixFixture.calculateRMSE_4 (1 ms)
+[ RUN ] NetflixFixture.createMovie_1
+[ OK ] NetflixFixture.createMovie_1 (50 ms)
+[ RUN ] NetflixFixture.createMovie_2
+[ OK ] NetflixFixture.createMovie_2 (7 ms)
+[ RUN ] NetflixFixture.createMovie_3
+[ OK ] NetflixFixture.createMovie_3 (7 ms)
+[ RUN ] NetflixFixture.createCustomer_1
+[ OK ] NetflixFixture.createCustomer_1 (46 ms)
+[ RUN ] NetflixFixture.createCustomer_2
+[ OK ] NetflixFixture.createCustomer_2 (9 ms)
+[ RUN ] NetflixFixture.createCustomer_3
+[ OK ] NetflixFixture.createCustomer_3 (10 ms)
+[ RUN ] NetflixFixture.createActual_1
+[ OK ] NetflixFixture.createActual_1 (41 ms)
+[ RUN ] NetflixFixture.createActual_2
+[ OK ] NetflixFixture.createActual_2 (9 ms)
+[ RUN ] NetflixFixture.createActual_3
+[ OK ] NetflixFixture.createActual_3 (9 ms)
+[ RUN ] NetflixFixture.getOverallCustomerRating_1
+[ OK ] NetflixFixture.getOverallCustomerRating_1 (2 ms)
+[ RUN ] NetflixFixture.getOverallCustomerRating_2
+[ OK ] NetflixFixture.getOverallCustomerRating_2 (2 ms)
+[ RUN ] NetflixFixture.getOverallCustomerRating_3
+[ OK ] NetflixFixture.getOverallCustomerRating_3 (1 ms)
+[ RUN ] NetflixFixture.getOverallCustomerRating_4
+[ OK ] NetflixFixture.getOverallCustomerRating_4 (2 ms)
+[ RUN ] NetflixFixture.solve_1
+==20809== Invalid write of size 8
+==20809== at 0x406031: createAvgMovieRate(std::basic_ifstream >&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x406B31: netflix_solve(std::istream&, std::ostream&, std::basic_ifstream >&, std::basic_ifstream >&, std::basic_ifstream >&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x418B4A: NetflixFixture_solve_1_Test::TestBody() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4478A2: void testing::internal::HandleExceptionsInMethodIfSupported(testing::Test, void (testing::Test::)(), char const) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A2BC: testing::Test::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A353: testing::TestInfo::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A454: testing::TestCase::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A6CC: testing::internal::UnitTestImpl::RunAllTests() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A9AD: testing::UnitTest::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40571F: main (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== Address 0x5c5cb90 is 0 bytes after a block of size 142,160 alloc'd
+==20809== at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20809== by 0x40E2F5: __gnu_cxx::new_allocator::allocate(unsigned long, void const) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40CD26: std::_Vector_base >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40A2CA: std::_Vector_base >::_M_create_storage(unsigned long) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4086CC: std::_Vector_base >::_Vector_base(unsigned long, std::allocator const&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4077C5: std::vector >::vector(unsigned long, std::allocator const&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x406F0C: __static_initialization_and_destruction_0(int, int) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x407052: _GLOBAL__sub_I_movieAvgArray (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x44BD7C: __libc_csu_init (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x5896ED4: (below main) (libc-start.c:246)
+==20809==
+[ OK ] NetflixFixture.solve_1 (108527 ms)
+[ RUN ] NetflixFixture.solve_2
+==20809== Invalid write of size 8
+==20809== at 0x406031: createAvgMovieRate(std::basic_ifstream >&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x406B31: netflix_solve(std::istream&, std::ostream&, std::basic_ifstream >&, std::basic_ifstream >&, std::basic_ifstream >&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x419676: NetflixFixture_solve_2_Test::TestBody() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4478A2: void testing::internal::HandleExceptionsInMethodIfSupported(testing::Test, void (testing::Test::)(), char const) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A2BC: testing::Test::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A353: testing::TestInfo::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A454: testing::TestCase::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A6CC: testing::internal::UnitTestImpl::RunAllTests() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A9AD: testing::UnitTest::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40571F: main (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== Address 0x5c5cb90 is 0 bytes after a block of size 142,160 alloc'd
+==20809== at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20809== by 0x40E2F5: __gnu_cxx::new_allocator::allocate(unsigned long, void const) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40CD26: std::_Vector_base >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40A2CA: std::_Vector_base >::_M_create_storage(unsigned long) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4086CC: std::_Vector_base >::_Vector_base(unsigned long, std::allocator const&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4077C5: std::vector >::vector(unsigned long, std::allocator const&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x406F0C: __static_initialization_and_destruction_0(int, int) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x407052: _GLOBAL__sub_I_movieAvgArray (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x44BD7C: __libc_csu_init (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x5896ED4: (below main) (libc-start.c:246)
+==20809==
+[ OK ] NetflixFixture.solve_2 (112059 ms)
+[ RUN ] NetflixFixture.solve_3
+==20809== Invalid write of size 8
+==20809== at 0x406031: createAvgMovieRate(std::basic_ifstream >&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x406B31: netflix_solve(std::istream&, std::ostream&, std::basic_ifstream >&, std::basic_ifstream >&, std::basic_ifstream >&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x41A0EA: NetflixFixture_solve_3_Test::TestBody() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4478A2: void testing::internal::HandleExceptionsInMethodIfSupported(testing::Test, void (testing::Test::)(), char const) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A2BC: testing::Test::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A353: testing::TestInfo::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A454: testing::TestCase::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A6CC: testing::internal::UnitTestImpl::RunAllTests() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x43A9AD: testing::UnitTest::Run() (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40571F: main (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== Address 0x5c5cb90 is 0 bytes after a block of size 142,160 alloc'd
+==20809== at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20809== by 0x40E2F5: __gnu_cxx::new_allocator::allocate(unsigned long, void const) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40CD26: std::_Vector_base >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x40A2CA: std::_Vector_base >::_M_create_storage(unsigned long) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4086CC: std::_Vector_base >::_Vector_base(unsigned long, std::allocator const&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x4077C5: std::vector >::vector(unsigned long, std::allocator const&) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x406F0C: __static_initialization_and_destruction_0(int, int) (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x407052: _GLOBAL__sub_I_movieAvgArray (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x44BD7C: __libc_csu_init (in /v/filer4b/v38q001/bgr423/cs371_oop/netflix/netflix-dinhh-brandonr/TestNetflix)
+==20809== by 0x5896ED4: (below main) (libc-start.c:246)
+==20809==
+[ OK ] NetflixFixture.solve_3 (111681 ms)
+[----------] 27 tests from NetflixFixture (332523 ms total)
+
+[----------] Global test environment tear-down
+[==========] 27 tests from 1 test case ran. (332549 ms total)
+[ PASSED ] 27 tests.
+==20809==
+==20809== HEAP SUMMARY:
+==20809== in use at exit: 0 bytes in 0 blocks
+==20809== total heap usage: 17,051,453 allocs, 17,051,453 frees, 698,846,197 bytes allocated
+==20809==
+==20809== All heap blocks were freed -- no leaks are possible
+==20809==
+==20809== For counts of detected and suppressed errors, rerun with: -v
+==20809== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:97.65% of 85
+Branches executed:100.00% of 130
+Taken at least once:57.69% of 130
+Calls executed:91.40% of 93
+Creating 'Netflix.c++.gcov'
