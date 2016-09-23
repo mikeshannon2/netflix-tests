@@ -1,0 +1,59 @@
+==30644== Memcheck, a memory error detector
+==30644== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==30644== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==30644== Command: ./TestNetflix
+==30644== 
+Running main() from gtest_main.cc
+[==========] Running 15 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 15 tests from NetflixTests
+[ RUN      ] NetflixTests.netflix_dot_product_1
+[       OK ] NetflixTests.netflix_dot_product_1 (8 ms)
+[ RUN      ] NetflixTests.netflix_dot_product_2
+[       OK ] NetflixTests.netflix_dot_product_2 (1 ms)
+[ RUN      ] NetflixTests.netflix_dot_product_3
+[       OK ] NetflixTests.netflix_dot_product_3 (2 ms)
+[ RUN      ] NetflixTests.netflix_dot_product_4
+[       OK ] NetflixTests.netflix_dot_product_4 (2 ms)
+[ RUN      ] NetflixTests.netflix_dot_product_5
+[       OK ] NetflixTests.netflix_dot_product_5 (2 ms)
+[ RUN      ] NetflixTests.netflix_dot_product_6
+[       OK ] NetflixTests.netflix_dot_product_6 (2 ms)
+[ RUN      ] NetflixTests.netflix_dot_product_7
+[       OK ] NetflixTests.netflix_dot_product_7 (2 ms)
+[ RUN      ] NetflixTests.netflix_dot_product_8
+[       OK ] NetflixTests.netflix_dot_product_8 (1 ms)
+[ RUN      ] NetflixTests.netflix_calc_1
+[       OK ] NetflixTests.netflix_calc_1 (3 ms)
+[ RUN      ] NetflixTests.netflix_calc_2
+[       OK ] NetflixTests.netflix_calc_2 (2 ms)
+[ RUN      ] NetflixTests.netflix_calc_3
+[       OK ] NetflixTests.netflix_calc_3 (2 ms)
+[ RUN      ] NetflixTests.netflix_calc_4
+[       OK ] NetflixTests.netflix_calc_4 (2 ms)
+[ RUN      ] NetflixTests.netflix_calc_5
+[       OK ] NetflixTests.netflix_calc_5 (2 ms)
+[ RUN      ] NetflixTests.netflix_obtain_inputs_1
+[       OK ] NetflixTests.netflix_obtain_inputs_1 (65 ms)
+[ RUN      ] NetflixTests.netflix_obtain_inputs_2
+[       OK ] NetflixTests.netflix_obtain_inputs_2 (4 ms)
+[----------] 15 tests from NetflixTests (108 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test case ran. (136 ms total)
+[  PASSED  ] 15 tests.
+==30644== 
+==30644== HEAP SUMMARY:
+==30644==     in use at exit: 0 bytes in 0 blocks
+==30644==   total heap usage: 454 allocs, 454 frees, 68,263 bytes allocated
+==30644== 
+==30644== All heap blocks were freed -- no leaks are possible
+==30644== 
+==30644== For counts of detected and suppressed errors, rerun with: -v
+==30644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:41.84% of 141
+Branches executed:31.37% of 204
+Taken at least once:20.59% of 204
+Calls executed:12.73% of 165
+Creating 'Netflix.c++.gcov'
