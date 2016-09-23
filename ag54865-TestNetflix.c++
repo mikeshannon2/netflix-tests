@@ -152,28 +152,28 @@ TEST(NetflixFixture, netflix_eval_3){
 TEST(NetflixFixture, generateCache_1){
   ostringstream cacheFile;
   map<string, double> cacheAvgRatings;
-  generateCache(cacheAvgRatings, "movie-averages.txt", ':');
+  generateCache(cacheAvgRatings, "/u/downing/cs/netflix-cs371p/cat3239-rhl495-movie-averages.txt", ' ');
   ASSERT_DOUBLE_EQ(cacheAvgRatings["1"], 3.75);
 }
 
 TEST(NetflixFixture, generateCache_2){
   ostringstream cacheFile;
   map<string, double> cacheAvgRatings;
-  generateCache(cacheAvgRatings, "movie-averages.txt", ':');
+  generateCache(cacheAvgRatings, "/u/downing/cs/netflix-cs371p/cat3239-rhl495-movie-averages.txt", ' ');
   ASSERT_DOUBLE_EQ(cacheAvgRatings["2"], 3.56);
 }
 
 TEST(NetflixFixture, generateCache_3){
   ostringstream cacheFile;
   map<string, double> cacheAvgRatings;
-  generateCache(cacheAvgRatings, "movie-averages.txt", ':');
+  generateCache(cacheAvgRatings, "/u/downing/cs/netflix-cs371p/cat3239-rhl495-movie-averages.txt", ' ');
   ASSERT_DOUBLE_EQ(cacheAvgRatings["3"], 3.64);
 }
 
 TEST(NetflixFixture, generateCache_4){
   ostringstream cacheFile;
   map<string, double> cacheAvgRatings;
-  generateCache(cacheAvgRatings, "movie-averages.txt", ':');
+  generateCache(cacheAvgRatings, "/u/downing/cs/netflix-cs371p/cat3239-rhl495-movie-averages.txt", ' ');
   ASSERT_DOUBLE_EQ(cacheAvgRatings["4"], 2.74);
 }
 
