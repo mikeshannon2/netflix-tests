@@ -1,0 +1,77 @@
+==38== Memcheck, a memory error detector
+==38== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==38== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==38== Command: ./TestNetflix
+==38== 
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 21 tests from NetflixFixture
+[ RUN      ] NetflixFixture.netflix_read1
+[       OK ] NetflixFixture.netflix_read1 (21 ms)
+[ RUN      ] NetflixFixture.netflix_read2
+[       OK ] NetflixFixture.netflix_read2 (3 ms)
+[ RUN      ] NetflixFixture.netflix_read3
+[       OK ] NetflixFixture.netflix_read3 (3 ms)
+[ RUN      ] NetflixFixture.eval1
+[       OK ] NetflixFixture.eval1 (9 ms)
+[ RUN      ] NetflixFixture.eval2
+[       OK ] NetflixFixture.eval2 (49 ms)
+[ RUN      ] NetflixFixture.eval3
+[       OK ] NetflixFixture.eval3 (4 ms)
+[ RUN      ] NetflixFixture.get_ans1
+[       OK ] NetflixFixture.get_ans1 (36 ms)
+[ RUN      ] NetflixFixture.get_ans2
+[       OK ] NetflixFixture.get_ans2 (13 ms)
+[ RUN      ] NetflixFixture.get_ans3
+[       OK ] NetflixFixture.get_ans3 (2 ms)
+[ RUN      ] NetflixFixture.netflix_rmse1
+[       OK ] NetflixFixture.netflix_rmse1 (3 ms)
+[ RUN      ] NetflixFixture.netflix_rmse2
+[       OK ] NetflixFixture.netflix_rmse2 (2 ms)
+[ RUN      ] NetflixFixture.netflix_rmse3
+[       OK ] NetflixFixture.netflix_rmse3 (5 ms)
+[ RUN      ] NetflixFixture.print_rmse1
+[       OK ] NetflixFixture.print_rmse1 (15 ms)
+[ RUN      ] NetflixFixture.print_rmse2
+[       OK ] NetflixFixture.print_rmse2 (5 ms)
+[ RUN      ] NetflixFixture.print_rmse3
+[       OK ] NetflixFixture.print_rmse3 (3 ms)
+[ RUN      ] NetflixFixture.split1
+[       OK ] NetflixFixture.split1 (19 ms)
+[ RUN      ] NetflixFixture.split2
+[       OK ] NetflixFixture.split2 (4 ms)
+[ RUN      ] NetflixFixture.split3
+[       OK ] NetflixFixture.split3 (6 ms)
+[ RUN      ] NetflixFixture.netflix_print1
+[       OK ] NetflixFixture.netflix_print1 (6 ms)
+[ RUN      ] NetflixFixture.netflix_print2
+[       OK ] NetflixFixture.netflix_print2 (3 ms)
+[ RUN      ] NetflixFixture.netflix_print3
+[       OK ] NetflixFixture.netflix_print3 (4 ms)
+[----------] 21 tests from NetflixFixture (257 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 1 test case ran. (351 ms total)
+[  PASSED  ] 21 tests.
+==38== 
+==38== HEAP SUMMARY:
+==38==     in use at exit: 72,704 bytes in 1 blocks
+==38==   total heap usage: 329 allocs, 328 frees, 148,486 bytes allocated
+==38== 
+==38== LEAK SUMMARY:
+==38==    definitely lost: 0 bytes in 0 blocks
+==38==    indirectly lost: 0 bytes in 0 blocks
+==38==      possibly lost: 0 bytes in 0 blocks
+==38==    still reachable: 72,704 bytes in 1 blocks
+==38==         suppressed: 0 bytes in 0 blocks
+==38== Rerun with --leak-check=full to see details of leaked memory
+==38== 
+==38== For counts of detected and suppressed errors, rerun with: -v
+==38== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:55.95% of 84
+Branches executed:40.00% of 130
+Taken at least once:22.31% of 130
+Calls executed:41.30% of 138
+Creating 'Netflix.c++.gcov'
