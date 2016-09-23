@@ -1,63 +1,66 @@
-==27047== Memcheck, a memory error detector
-==27047== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==27047== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==27047== Command: ./TestNetflix
-==27047== 
+==12685== Memcheck, a memory error detector
+==12685== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==12685== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==12685== Command: ./TestNetflix
+==12685== 
 Running main() from gtest_main.cc
-[==========] Running 14 tests from 1 test case.
+[==========] Running 14 tests from 2 test cases.
 [----------] Global test environment set-up.
-[----------] 14 tests from Netflix
+[----------] 6 tests from Netflix
 [ RUN      ] Netflix.compareFloats
 [       OK ] Netflix.compareFloats (11 ms)
 [ RUN      ] Netflix.compareFloats_2
-[       OK ] Netflix.compareFloats_2 (1 ms)
+[       OK ] Netflix.compareFloats_2 (2 ms)
 [ RUN      ] Netflix.compareFloats_3
 [       OK ] Netflix.compareFloats_3 (1 ms)
-[ RUN      ] Netflix.solve_format
-[       OK ] Netflix.solve_format (141229 ms)
 [ RUN      ] Netflix.rmse
-[       OK ] Netflix.rmse (10 ms)
+[       OK ] Netflix.rmse (15 ms)
 [ RUN      ] Netflix.rmse_2
 [       OK ] Netflix.rmse_2 (9 ms)
 [ RUN      ] Netflix.rmse_3
 [       OK ] Netflix.rmse_3 (3 ms)
-[ RUN      ] Netflix.prediction
-[       OK ] Netflix.prediction (3 ms)
-[ RUN      ] Netflix.prediction_rmse
-[       OK ] Netflix.prediction_rmse (12 ms)
-[ RUN      ] Netflix.prediction_rmse_2
-[       OK ] Netflix.prediction_rmse_2 (2 ms)
-[ RUN      ] Netflix.prediction_rmse_3
-[       OK ] Netflix.prediction_rmse_3 (3 ms)
-[ RUN      ] Netflix.actual_rating
-[       OK ] Netflix.actual_rating (4 ms)
-[ RUN      ] Netflix.actual_rating_2
-[       OK ] Netflix.actual_rating_2 (3 ms)
-[ RUN      ] Netflix.actual_rating_3
-[       OK ] Netflix.actual_rating_3 (4 ms)
-[----------] 14 tests from Netflix (141307 ms total)
+[----------] 6 tests from Netflix (52 ms total)
+
+[----------] 8 tests from NetflixPredictorTest
+[ RUN      ] NetflixPredictorTest.solve_format
+[       OK ] NetflixPredictorTest.solve_format (156 ms)
+[ RUN      ] NetflixPredictorTest.solve_format_2
+[       OK ] NetflixPredictorTest.solve_format_2 (7 ms)
+[ RUN      ] NetflixPredictorTest.prediction
+[       OK ] NetflixPredictorTest.prediction (4 ms)
+[ RUN      ] NetflixPredictorTest.prediction_2
+[       OK ] NetflixPredictorTest.prediction_2 (4 ms)
+[ RUN      ] NetflixPredictorTest.prediction_3
+[       OK ] NetflixPredictorTest.prediction_3 (4 ms)
+[ RUN      ] NetflixPredictorTest.prediction_rmse
+[       OK ] NetflixPredictorTest.prediction_rmse (15 ms)
+[ RUN      ] NetflixPredictorTest.prediction_rmse_2
+[       OK ] NetflixPredictorTest.prediction_rmse_2 (4 ms)
+[ RUN      ] NetflixPredictorTest.prediction_rmse_3
+[       OK ] NetflixPredictorTest.prediction_rmse_3 (4 ms)
+[----------] 8 tests from NetflixPredictorTest (200 ms total)
 
 [----------] Global test environment tear-down
-[==========] 14 tests from 1 test case ran. (141347 ms total)
+[==========] 14 tests from 2 test cases ran. (296 ms total)
 [  PASSED  ] 14 tests.
-==27047== 
-==27047== HEAP SUMMARY:
-==27047==     in use at exit: 72,704 bytes in 1 blocks
-==27047==   total heap usage: 2,404,633 allocs, 2,404,632 frees, 116,071,504 bytes allocated
-==27047== 
-==27047== LEAK SUMMARY:
-==27047==    definitely lost: 0 bytes in 0 blocks
-==27047==    indirectly lost: 0 bytes in 0 blocks
-==27047==      possibly lost: 0 bytes in 0 blocks
-==27047==    still reachable: 72,704 bytes in 1 blocks
-==27047==         suppressed: 0 bytes in 0 blocks
-==27047== Rerun with --leak-check=full to see details of leaked memory
-==27047== 
-==27047== For counts of detected and suppressed errors, rerun with: -v
-==27047== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==12685== 
+==12685== HEAP SUMMARY:
+==12685==     in use at exit: 72,704 bytes in 1 blocks
+==12685==   total heap usage: 868 allocs, 867 frees, 172,936 bytes allocated
+==12685== 
+==12685== LEAK SUMMARY:
+==12685==    definitely lost: 0 bytes in 0 blocks
+==12685==    indirectly lost: 0 bytes in 0 blocks
+==12685==      possibly lost: 0 bytes in 0 blocks
+==12685==    still reachable: 72,704 bytes in 1 blocks
+==12685==         suppressed: 0 bytes in 0 blocks
+==12685== Rerun with --leak-check=full to see details of leaked memory
+==12685== 
+==12685== For counts of detected and suppressed errors, rerun with: -v
+==12685== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 File 'Netflix.c++'
-Lines executed:98.31% of 59
-Branches executed:88.41% of 138
-Taken at least once:50.72% of 138
-Calls executed:80.70% of 114
+Lines executed:100.00% of 54
+Branches executed:100.00% of 88
+Taken at least once:56.82% of 88
+Calls executed:88.76% of 89
 Creating 'Netflix.c++.gcov'
