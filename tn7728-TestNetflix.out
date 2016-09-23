@@ -1,0 +1,80 @@
+valgrind ./TestNetflix                               >  TestNetflix.tmp 2>&1
+gcov -b Netflix.c++ | grep -A 5 "File 'Netflix.c++'" >> TestNetflix.tmp
+cat TestNetflix.tmp
+==3345== Memcheck, a memory error detector
+==3345== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==3345== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==3345== Command: ./TestNetflix
+==3345==
+Running main() from gtest_main.cc
+[==========] Running 16 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 16 tests from NetflixFixtures
+[ RUN      ] NetflixFixtures.moviecache_1
+[       OK ] NetflixFixtures.moviecache_1 (778 ms)
+[ RUN      ] NetflixFixtures.moviecache_2
+[       OK ] NetflixFixtures.moviecache_2 (762 ms)
+[ RUN      ] NetflixFixtures.moviecache_3
+[       OK ] NetflixFixtures.moviecache_3 (712 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_1
+[       OK ] NetflixFixtures.predict_ratings_1 (5 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_2
+[       OK ] NetflixFixtures.predict_ratings_2 (1 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_3
+[       OK ] NetflixFixtures.predict_ratings_3 (2 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_4
+[       OK ] NetflixFixtures.predict_ratings_4 (2 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_5
+[       OK ] NetflixFixtures.predict_ratings_5 (1 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_6
+[       OK ] NetflixFixtures.predict_ratings_6 (2 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_7
+[       OK ] NetflixFixtures.predict_ratings_7 (1 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_8
+[       OK ] NetflixFixtures.predict_ratings_8 (2 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_9
+[       OK ] NetflixFixtures.predict_ratings_9 (2 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_10
+[       OK ] NetflixFixtures.predict_ratings_10 (2 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_11
+[       OK ] NetflixFixtures.predict_ratings_11 (1 ms)
+[ RUN      ] NetflixFixtures.predict_ratings_12
+[       OK ] NetflixFixtures.predict_ratings_12 (2 ms)
+[ RUN      ] NetflixFixtures.netflix_eval_1
+[       OK ] NetflixFixtures.netflix_eval_1 (217240 ms)
+[----------] 16 tests from NetflixFixtures (220009 ms total)
+
+[----------] Global test environment tear-down
+[==========] 16 tests from 1 test case ran. (220060 ms total)
+[  PASSED  ] 16 tests.
+==3345==
+==3345== HEAP SUMMARY:
+==3345==     in use at exit: 72,704 bytes in 1 blocks
+==3345==   total heap usage: 5,771,875 allocs, 5,771,874 frees, 99,092,211 bytes allocated
+==3345==
+==3345== LEAK SUMMARY:
+==3345==    definitely lost: 0 bytes in 0 blocks
+==3345==    indirectly lost: 0 bytes in 0 blocks
+==3345==      possibly lost: 0 bytes in 0 blocks
+==3345==    still reachable: 72,704 bytes in 1 blocks
+==3345==         suppressed: 0 bytes in 0 blocks
+==3345== Rerun with --leak-check=full to see details of leaked memory
+==3345==
+==3345== For counts of detected and suppressed errors, rerun with: -v
+==3345== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Netflix.c++'
+Lines executed:80.00% of 65
+Branches executed:77.78% of 108
+Taken at least once:44.44% of 108
+Calls executed:62.62% of 107
+Creating 'Netflix.c++.gcov'
+Netflix.c++ found
+Netflix.h found
+Netflix.log found
+html found
+RunNetflix.c++ found
+RunNetflix.in found
+RunNetflix.out found
+TestNetflix.c++ found
+TestNetflix.out found
+success
