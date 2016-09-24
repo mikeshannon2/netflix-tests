@@ -125,7 +125,7 @@ TEST(SolveFixture, solve1)
   istringstream mockProbe("8:\n8\n8\n8\n8\n8\n10006:\n8\n8\n8\n8\n11412:\n8\n8\n8\n8\n8\n8\n8\n8\n8\n8\n8\n8\n8\n12003:\n8\n8\n8\n8\n8\n8\n8\n");
   ostringstream w;
   netflix_solve(mockProbe, w, movieCache, customerCache, actualCache);
-  ASSERT_EQ("8:\n3.2\n3.2\n3.2\n3.2\n3.2\n10006:\n1.6\n1.6\n1.6\n1.6\n11412:\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n12003:\n3.4\n3.4\n3.4\n3.4\n3.4\n3.4\n3.4\nRMSE: 1.54\n", w.str());
+  ASSERT_EQ("8:\n2.8\n2.8\n2.8\n2.8\n2.8\n10006:\n-0.3\n-0.3\n-0.3\n-0.3\n11412:\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n2.7\n12003:\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\n3.2\nRMSE: 2.1\n", w.str());
 }
 
 TEST(SolveFixture, solve2)
@@ -136,7 +136,7 @@ TEST(SolveFixture, solve2)
   istringstream mockProbe("8:\n1\n2042147\n8\n34\n5561:\n1\n2042147\n8\n34\n");
   ostringstream w;
   netflix_solve(mockProbe, w, movieCache, customerCache, actualCache);
-  ASSERT_EQ("8:\n3.2\n3.7\n3.2\n3.2\n5561:\n3.7\n4.2\n3.7\n3.7\nRMSE: 0.83\n", w.str());
+  ASSERT_EQ("8:\n2.8\n3.8\n2.8\n2.8\n5561:\n3.7\n4.7\n3.7\n3.7\nRMSE: 0.94\n", w.str());
 }
 
 TEST(SolveFixture, solve3)
